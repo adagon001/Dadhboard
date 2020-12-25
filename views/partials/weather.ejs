@@ -1,0 +1,8 @@
+<div class="weather">
+    <img class="weather_icon" src="<%= apiData.skiStats.weather.icon.url %>" alt="LivesCableway" />
+    <img class="weather_icon_down" src="/images/arrow-down.svg" alt="LivesCableway" />
+    <img class="weather_icon_up" src="/images/arrow-up.svg" alt="LivesCableway" />
+    <span class="weather_down"><%= apiData.skiStats.weather.temperature.min %><sup>°C</sup></span>
+    <span class="weather_up"><%= apiData.skiStats.weather.temperature.max %><sup>°C</sup></span>
+    <span class="weather_text"><%= apiData.skiStats.weather.icon.text.toUpperCase() %></span>
+</div>

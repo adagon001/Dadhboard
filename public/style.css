@@ -1,0 +1,511 @@
+
+body{
+  font-family: Montserrat;
+  color:  #38365F;
+  font-size: 2vh;
+  margin: 0;
+}
+.disable-scrollbars::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.disable-scrollbars {
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* IE 10+ */
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header {
+    background: #FFFFFF;
+    width: 100%;
+    height: 15vh;
+    left: 0px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    overflow-x: auto;
+    font-style: normal;
+    color: #2F2F2F;
+    box-shadow: 0px 3px 10px #888888;
+  }
+  .header_logo {
+    width: 15vh;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+.header_openhours {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  }
+  .content{
+    background:#E7EFF7;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .news{
+      padding-top: 16vh;
+      padding-bottom: 16vh;
+      margin-left: 0.5%;
+      width: 60%;
+      display: flex;
+      min-height: 68vh;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  }
+  .new{
+    border-radius: 15px;
+    width: 90%;
+    min-height: 10vh;
+    padding: 3vh;
+    margin: 1vh;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .new_icon{
+    height: 5vh;
+
+  }
+  .new_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: 3vh;
+    width: 90%;
+  }
+  .new_text{
+    font-size: 2.5vh;
+    font-weight: 500;
+    margin: 0.5vh 0;
+  }
+  .new_line{
+    margin: 0.5vh 0;
+    height: 0.25vh;
+    width: 100%;
+    background-color: #99BAE0 ;
+    border-radius: 15px;
+  }
+  .new_operating{
+    margin: 0.5vh 0;
+  }
+  .operating{
+    background-color:#11A683;
+    color: #FFFFFF;
+    font-size: 2vh;
+    border-radius: 3px;
+    padding: 0.5vh 3%;
+    font-style: normal; 
+    margin: 5vh 0;
+  }
+  .notoperating{
+    background-color:#E46B62;
+    color: #FFFFFF;
+    font-size: 2vh;
+    border-radius: 3px;
+    padding: 0.5vh 3%;
+    font-style: normal; 
+    margin: 5vh 0;
+  }
+  .operatingen{
+    color: #11A683;
+    font-size: 2vh;
+    font-style: normal; 
+    margin: 0.5vh 0;
+  }
+  .notoperatingen{
+    color: #E46B62;
+    font-size: 2vh;
+    font-style: normal; 
+    margin: 0.5vh 0;
+  }
+  .timeago{
+    width: 12%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  .timeagobig{
+    font-size: 2vh;
+    align-self: flex-end;
+    font-style: normal;
+  }
+  .timeagosmall{
+    align-self: flex-end;
+    font-size: 1.7vh;
+    font-style: normal;
+  }
+  .new_title{
+    font-size: 3vh;
+    margin: 1vh 0;
+  }
+.streams{
+    position: fixed;
+    bottom: 15vh;
+    right: 1%;
+    width: 38%;
+    top:15vh;
+    height: 70vh;
+    display: flex;
+    overflow-x: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+.bigstream{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px #888888;
+  margin: 1vh 7%;
+}
+.bigstream img{
+  width:100%;
+  padding: auto;
+}
+.bigstreamtitle{
+  font-size: 2.5vh;
+  font-weight: 700;
+}
+.bigstreaminfo{
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+  align-items: center;
+}
+.bigstreaminfo div{
+  display: flex;
+  flex-direction: column;
+}
+.smallstreams {
+  display: flex;
+  justify-content: center;
+  margin: 1vh 1%;
+}
+.bc{
+  max-height: 50%;
+}
+.smallstream {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  width:43.5%;
+  box-shadow: 3px 3px 10px #888888;
+  margin: 0 1%;
+
+}
+.smallvideo{
+  width:100%;
+}
+.smallstreamtitle{
+  font-size: 1.5vh;
+  font-weight: 700;
+}
+.footer{
+    background: linear-gradient(89.95deg, #2B528F 20.86%, #295AA7 68.25%, #3F7FE3 99.32%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_oh_time{
+font-style: normal; 
+font-weight: 800;
+font-size: 4vh;
+margin-left: 2%;
+}
+.header_time{
+  font-style: normal; 
+  font-weight: 800;
+  font-size: 4vh;
+}
+.header_actualtime{
+  margin-left: auto;
+  margin-right: 2%;
+}
+.header_oh_big{
+font-size: 3vh;
+font-style: normal;
+font-weight: 700;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.header_oh_small{
+font-size: 2vh;
+font-style: normal;
+font-weight: 600;
+letter-spacing: 0em;
+text-align: left;
+}
+.cableslopes{
+  width: 12%;
+  height: 80% ;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3vh;
+  font-style: normal;
+  color: #FFFFFF;
+}
+.cableways_img{
+  width: 5vh;
+}
+.slopes_img{
+  width: 4.5vh;
+}
+
+.occupancy{
+  width: 25%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+.occupancy_icon{
+  width:4vh;
+  margin-bottom: 0;
+}
+
+.occupancy_graph_bottom{
+  width: 100%;
+  height: 10%;
+  background: #C4D7E4;
+  border-radius: 15px;
+  left: 0px;
+}
+.occupancy_graph_upper{
+  width: 80%;
+  border-radius: 15px;
+  background: #6A90F4;
+  height: 100%;
+}
+.occupancy_text{
+  font-size: 2vh;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.occupancy span{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.weather{
+  width:12%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas: "A B C" "A D E" "F F F";
+}
+.weather_icon{
+  grid-area: A;
+  height: 7vh;
+  margin: auto;
+}
+.weather_icon_down{
+  grid-area: B;
+  height: 4vh;
+  margin: auto;
+}
+.weather_icon_up{
+  grid-area: D;
+  height: 4vh;
+  margin: auto;
+}
+.weather_down{
+  grid-area: C;
+  font-size: 3vh;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: auto;
+}
+.weather_up{
+  grid-area: E;
+  font-size: 3vh;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: auto;
+}
+.weather_text{
+  grid-area: F;
+  font-size: 1.5vh;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: auto;
+  margin-bottom: 0;
+  text-align: center;
+}
+sup{
+  font-size: 1.5vh;
+}
+.forecast{
+  width: 14%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 40% 20% 20%;
+  grid-template-areas: "A A" "B C" "D E" "F G";
+}
+.forecast_title{
+  grid-area: A;
+  font-size: 2vh;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: auto;
+}
+.forecast_icon1{
+  grid-area: B;
+  height: 3.5vh;
+  margin: auto;
+}
+.forecast_icon2{
+  grid-area: C;
+  height: 3.5vh;
+  margin: auto;
+}
+.forecast_first{
+  grid-area: D;
+  font-size: 2vh;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: auto;
+}
+.forecast_second{
+  grid-area: E;
+  font-size: 2vh;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: auto;
+}
+.forecast_day1{
+  font-size: 1.5vh;
+  font-weight: normal;
+  color: #FFFFFF;
+  margin: auto;
+}
+.forecast_day2{
+  font-size: 1.5vh;
+  font-weight: normal;
+  color: #FFFFFF;
+  margin: auto;
+}
+.snowfall{
+  width: 16%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "A B" "A C" "D E" "D F";
+  border-radius: 0 15px 15px 0 ;
+}
+.snowfall_icon{
+  grid-area: A;
+  height: 75%;
+  margin: auto;
+  margin-left: 9%;
+}
+.snowfall_icon24{
+  grid-area: D;
+  height: 80%;
+  margin: auto;
+}
+.snowfall_title{
+  grid-area: B;
+  font-size: 2vh;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: auto;
+  margin-left: 0;
+}
+.snowfall_title24{
+  grid-area: E;
+  font-size: 2vh;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: auto;
+  margin-left: 0;
+}
+.snowfall_amount{
+  grid-area: C;
+  font-size: 2.5vh;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: auto;
+  margin-left: 0;
+}
+.snowfall_amount24{
+  grid-area: F;
+  font-size: 2.5vh;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: auto;
+  margin-left: 0;
+}
+.line{
+  height: 75%;
+}
+.avalanche{
+  background: #FEF200;
+  width:13%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 10% 20% 20% 20% 20%;
+  grid-template-areas: "0 0" "A A" "B C" "B D" "E E";
+  border-radius: 15px 0 0 15px  ;
+}
+.avalanche_title{
+  grid-area: A;
+  font-size: 2vh;
+  font-weight: 600;
+  color: #2B528F;
+  margin: auto;
+}
+.avalanche_icon{
+  grid-area: B;
+  height: 5vh;
+  margin: auto;
+}
+.avalanche_time_title{
+  grid-area: C;
+  font-size: 2vh;
+  font-weight: 600;
+  color: #2B528F;
+  margin: auto;
+}
+.avalanche_time{
+  grid-area: D;
+  font-size: 3vh;
+  font-weight: 400;
+  color: #2B528F;
+  margin: auto;
+}
+.avalanche_info{
+  grid-area: E;
+  font-size: 2.5vh;
+  font-weight: 700;
+  color: #2B528F;
+  margin: auto;
+}

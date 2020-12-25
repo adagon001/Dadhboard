@@ -1,0 +1,13 @@
+<div class="snowfall">
+    <img class="snowfall_icon" src="/images/vlocka.svg" alt="WeatherForecastIcon" />
+    <span class="snowfall_title">SNEHOVÁ POKRÝVKA</span>
+    <span class="snowfall_amount"><%= apiData.skiStats.precipitation.min +" - "+apiData.skiStats.precipitation.max %> cm</span>
+    <% if (apiData.skiStats.precipitation.snowfall24h!=null) { %>
+     
+    <img class="snowfall_icon24" src="/images/vlocka24.svg" alt="WeatherForecastIcon" />
+    <span class="snowfall_title24">POSLEDNÝCH 24H</span>
+    <span class="snowfall_amount24"><%= apiData.skiStats.precipitation.snowfall24h %> cm</span>
+    <% }else { %> 
+        <style>.snowfall{margin-top: 5vh; height: 65%;}</style>
+    <% } %>
+</div>

@@ -1,0 +1,102 @@
+<div class="news">
+    <% apiNewsData.result.currentNews.forEach(function(obj){%>
+        <div class=new>
+            <img class="new_icon" src="/images/<%= "new_icon_" + obj.typeId %>.svg" alt="Cableway" />
+            <div class="new_content">
+            <h2 class="new_title"><%= obj.label+" "+obj.name %> </h2>
+            <%if (!obj.isOpen ) { %>
+                <div class="new_text">Príčina: <%= obj.cause%></div>
+                <% } %>
+            <div class="new_operating"><em class="
+                <%if (obj.isOpen ) { %>
+                    <%="operating"%>
+                    <% } else { %>
+                    <%="notoperating"%>
+                    <% } %>
+                " ><%= obj.status%></em></div>
+            </div>
+            <div class="timeago">
+                <% 
+                var seconds = apiNewsData.timestamp-obj.timestamp;
+                var date= new Date(obj.lastUpdate);
+                %>
+                <em class="timeagobig" >
+                    <% if(seconds<60){%> <%="práve teraz"%>
+                    <% }else if(seconds<3600){%> <%="pred "+ Math.floor(seconds/60).toString()+" m"%>
+                    <% }else if(seconds<86400){%> <%="pred "+ Math.floor(seconds/3600).toString()+" h"%>
+                    <% }else {%> <%=date.getDate().toString()+"."+date.getMonth().toString()+"."+date.getFullYear().toString()%>
+                    <% }%> 
+                </em>
+                <em class="timeagosmall" >
+                    <% if(seconds<60){%> <%="just now"%>
+                    <% }else if(seconds<3600){%> <%= Math.floor(seconds/60).toString()+" m ago"%>
+                    <% }else if(seconds<86400){%> <%=Math.floor(seconds/3600).toString()+" h ago"%>
+                    <% }else {}%>
+                </em>
+            </div>
+        </div>
+        <% }); %>
+    <!--
+    <div class="new">
+        <img class="new_icon" src="/images/cablewayblue.svg" alt="Cableway" />
+        <div class="new_content">
+        <h2 class="new_title">A3 Záhradky - Rovná hoľa</h2>
+        <div class="new_operating"><em class="operating" >v prevadzke</em></div>
+        <em class="operatingen" >in operation again</em>
+        </div>
+        <div class="timeago">
+        <em class="timeagobig" >pred 10 m</em>
+        <em class="timeagosmall" >10m ago</em>
+        </div>
+    </div>
+    <div class=new>
+        <img class="new_icon" src="/images/cablewayblue.svg" alt="Cableway" />
+        <div class="new_content">
+        <h2 class="new_title">A3 Záhradky - Rovná hoľa </h2>
+        <div class="new_text">Príčina: Nevhodné snehové podmienky</div>
+        <div class="new_operating"><em class="notoperating" >mimo prevádzky</em></div>
+        <em class="notoperatingen" >Stopped</em>
+        </div>
+        <div class="timeago">
+            <em class="timeagobig" >pred 10 m</em>
+            <em class="timeagosmall" >10m ago</em>
+        </div>
+    </div>
+    <div class=new>
+        <img class="new_icon" src="/images/warning.svg" alt="Warning" />
+        <div class="new_content">
+        <div class="new_text">Fúka silný vietor, dbajte na bezpečnosť, jazdite opatrne!</div>
+        <div class="new_line"></div>
+        <div class="new_text_en">Strong wind, ride carefully! Lorem ispum.</div>
+        </div>
+        <div class="timeago">
+            <em class="timeagobig" >pred 10 m</em>
+            <em class="timeagosmall" >10m ago</em>
+        </div>
+    </div>
+    <div class=new>
+        <img class="new_icon" src="/images/cablewayblue.svg" alt="Cableway" />
+        <div class="new_content">
+        <h2 class="new_title">A3 Záhradky - Rovná hoľa </h2>
+        <div class="new_operating"><em class="operating" >v prevadzke</em></div>
+        <em class="operatingen" >in operation again</em>
+        </div>
+        <div class="timeago">
+            <em class="timeagobig" >pred 10 m</em>
+            <em class="timeagosmall" >10m ago</em>
+        </div>
+    </div>
+    <div class=new>
+        <img class="new_icon" src="/images/cablewayblue.svg" alt="Cableway" />
+        <div class="new_content">
+        <h2 class="new_title">A3 Záhradky - Rovná hoľa </h2>
+        <div class="new_operating"><em class="operating" >v prevadzke</em></div>
+        <em class="operatingen" >in operation again</em>
+        </div>
+        <div class="timeago">
+            <em class="timeagobig" >pred 10 m</em>
+            <em class="timeagosmall" >10m ago</em>
+        </div>
+    </div>
+    -->
+</div>

@@ -1,0 +1,11 @@
+<div class="header">
+    <img class="header_logo" src="<%= apiData.resort.logo.thumbnail %>" alt="Jasna logo" />
+    <div class="header_openhours">
+        <em class="header_oh_big">Otváracia doba:<br></em>
+        <em class="header_oh_small">Opening hours</em>
+    </div>
+    <span class="header_oh_time"><%= apiData.resort.businessHours[0]+" - "+apiData.resort.businessHours[1] %></span>
+<div class="header_actualtime">
+    <em id="time" class="header_time" ></em>
+</div>
+</div>

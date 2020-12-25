@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+    //scrolling page script
+    function pageScroll() {
+        window.scrollBy(0,1);
+        scrolldelay = setTimeout(pageScroll,10);
+        time();
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            window.scrollTo({top: 0,left: 0,behavior:"smooth"});
+            clearTimeout(scrolldelay);
+            setTimeout(pageScroll,1000);
+        }
+    }
+    //actual time script
+    function time() {
+        var today = new Date();
+        if(today.getMinutes()<10){
+            var time = today.getHours() + ":0" + today.getMinutes();
+        }else{var time = today.getHours() + ":" + today.getMinutes();}
+        document.getElementById("time").innerHTML = time;
+    }
+    </script>
+    <!-- video.js scripts -->
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js">
+    </script>
+</head>
+<body class="disable-scrollbars" onload="pageScroll()">
+    <%- include('partials/header') %> 
+    <div class="content">
+        <%- include('partials/news') %>
+        <%- include('partials/streams') %>
+    </div>
+    <div class="footer">
+        <%- include('partials/cableslopes') %>
+        <%- include('partials/occupancy') %>
+        <%- include('partials/weather') %>
+        <%- include('partials/forecast') %>
+        <%- include('partials/snowfall') %>
+        <%- include('partials/avalanche') %>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,20 @@
+<% if (apiData.avalancheWarning!=null) { %>
+<div class="avalanche">
+    <span class="avalanche_title">LAVÍNOVÁ SITUÁCIA</span>
+    <img class="avalanche_icon" src="<%= apiData.avalancheWarning.current.url %>" alt="DangerScale" />
+    <span class="avalanche_time_title">AM/PM</span>
+    <span class="avalanche_time"><%= apiData.avalancheWarning.am.level %> / <%= apiData.avalancheWarning.pm.level %></span>
+    <span class="avalanche_info"><%= apiData.avalancheWarning.current.text.toUpperCase() %></span>
+    <% if (apiData.avalancheWarning.current.level==0) { %>
+        <style>.avalanche{background-color: #FFFFFF;}</style>
+    <% }else if(apiData.avalancheWarning.current.level==1){ %> 
+        <style>.avalanche{background-color: #BAD37C;}</style>
+    <% }else if(apiData.avalancheWarning.current.level==2){ %> 
+        <style>.avalanche{background-color: #FEF200;}</style>
+    <% }else if(apiData.avalancheWarning.current.level==3){ %> 
+        <style>.avalanche{background-color: #FE9800;}</style>
+    <% }else { %> 
+        <style>.avalanche{background-color: #FE0000;}</style>
+    <% } %>
+</div>
+<% } %> 

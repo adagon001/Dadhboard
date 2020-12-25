@@ -1,0 +1,151 @@
+<div class="streams">
+    <%if (apiData.cams.length>=3 ) { %>
+        <div class="bigstream">
+            <%if (apiData.cams[0].stream.url!=null ) { %>
+            <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls loop muted autoplay preload="auto" data-setup='{}'>
+            <source src=<%= apiData.cams[0].stream.url %>  type=
+                <%if (apiData.cams[0].stream.url.substring(apiData.cams[0].stream.url.length - 3 ) == "mp4"){ %>
+                    <%= "video/mp4" %> 
+                <% }else{ %><%= "application/x-mpegURL" %><% } %>
+                >
+            </video>
+            <% }else{%> 
+                <img src=<%= apiData.cams[0].thumbnail._hq.url %> alt="Livestream" />
+                <% } %>
+            <span class="bigstreaminfo">
+                <div>
+                    <span class="bigstreamtitle"><%= apiData.cams[0].name %></span>
+                    <span><%= apiData.cams[0].altitude.value %> m n.m.</span>
+                </div>
+                <% if (apiData.cams[0].weather!=null) { %>
+                <span class="bigstreamtitle"><%= apiData.cams[0].weather.wind.speed %> m/s</span>
+                <span class="bigstreamtitle"><%= apiData.cams[0].weather.temperature.value %><sup>°C</sup></span>
+                <% } %> 
+            </span>
+        </div>
+        <div class="smallstreams">
+            <div class="smallstream">
+                <%if (apiData.cams[0].stream.url!=null ) { %>
+                <video id="my_video_1" class="smallvideo video-js vjs-fluid vjs-default-skin" controls muted autoplay preload="auto" data-setup='{}'>
+                <source src=<%= apiData.cams[1].stream.url %>  type=
+                    <%if (apiData.cams[1].stream.url.substring(apiData.cams[1].stream.url.length - 3 ) == "mp4"){ %>
+                        <%= "video/mp4" %> 
+                    <% }else{ %><%= "application/x-mpegURL" %><% } %>
+                    >
+                </video>
+                <% }else{%> 
+                    <img class="smallvideo" src=<%= apiData.cams[1].thumbnail._hq.url %> alt="Livestream" />
+                    <% } %>
+                <span class="bigstreaminfo">
+                    <span class="smallstreamtitle"><%= apiData.cams[1].name %></span>
+                    <% if (apiData.cams[1].weather!=null) { %>
+                    <span class="smallstreamtitle" ><%= apiData.cams[1].weather.temperature.value %><sup>°C</sup></span>
+                    <% } %> 
+                </span>
+            </div>
+            <div class="smallstream" >
+                <%if (apiData.cams[0].stream.url!=null ) { %>
+                <video id="my_video_1" class="smallvideo video-js vjs-fluid vjs-default-skin" controls muted autoplay preload="auto" data-setup='{}'>
+                <source src=<%= apiData.cams[2].stream.url %>  type=
+                    <%if (apiData.cams[2].stream.url.substring(apiData.cams[0].stream.url.length - 3 ) == "mp4"){ %>
+                        <%= "video/mp4" %> 
+                    <% }else{ %><%= "application/x-mpegURL" %><% } %>
+                    >
+                </video>
+                <% }else{%> 
+                    <img class="smallvideo" src=<%= apiData.cams[2].thumbnail._hq.url %> alt="Livestream" />
+                    <% } %>
+                <span class="bigstreaminfo">
+                    <span class="smallstreamtitle"><%= apiData.cams[2].name %></span>
+                    <% if (apiData.cams[2].weather!=null) { %>
+                    <span class="smallstreamtitle" ><%= apiData.cams[2].weather.temperature.value %><sup>°C</sup></span>
+                    <% } %>
+                </span> 
+            </div>
+        </div>
+    <% }else if(apiData.cams.length==1 ){%>
+        <div class="bigstream">
+            <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls muted autoplay preload="auto" data-setup='{}'>
+            <source src=<%= apiData.cams[0].stream.url %>  type=
+                <%if (apiData.cams[0].stream.url.substring(apiData.cams[0].stream.url.length - 3 ) == "mp4"){ %>
+                    <%= "video/mp4" %> 
+                <% }else{ %><%= "application/x-mpegURL" %><% } %>
+                >
+            </video>
+            <span class="bigstreaminfo">
+                <div>
+                    <span class="bigstreamtitle"><%= apiData.cams[0].name %></span>
+                    <span><%= apiData.cams[0].altitude.value %> m n.m.</span>
+                </div>
+                <span class="bigstreamtitle"><%= apiData.cams[0].weather.wind.speed %> m/s</span>
+                <span class="bigstreamtitle"><%= apiData.cams[0].weather.temperature.value %><sup>°C</sup></span>
+            </span>
+            <style>.bigstream{margin: 1vh 2%;}</style>
+        </div>
+        <% }else if(apiData.cams.length==2 ){ %>
+            <div class="bigstream">
+                <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls muted autoplay preload="auto" data-setup='{}'>
+                <source src=<%= apiData.cams[0].stream.url %>  type=
+                    <%if (apiData.cams[0].stream.url.substring(apiData.cams[0].stream.url.length - 3 ) == "mp4"){ %>
+                        <%= "video/mp4" %> 
+                    <% }else{ %><%= "application/x-mpegURL" %><% } %>
+                    >
+                </video>
+                <span class="bigstreaminfo">
+                    <div>
+                        <span class="bigstreamtitle"><%= apiData.cams[0].name %></span>
+                        <span><%= apiData.cams[0].altitude.value %> m n.m.</span>
+                    </div>
+                    <span class="bigstreamtitle"><%= apiData.cams[0].weather.wind.speed %> m/s</span>
+                    <span class="bigstreamtitle"><%= apiData.cams[0].weather.temperature.value %><sup>°C</sup></span>
+                </span>
+                <style>.bigstream{margin: 1vh 2%;}</style>
+            </div>
+            <div class="bigstream">
+                <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls muted autoplay preload="auto" data-setup='{}'>
+                <source src=<%= apiData.cams[1].stream.url %>  type=
+                    <%if (apiData.cams[1].stream.url.substring(apiData.cams[1].stream.url.length - 3 ) == "mp4"){ %>
+                        <%= "video/mp4" %> 
+                    <% }else{ %><%= "application/x-mpegURL" %><% } %>
+                    >
+                </video>
+                <span class="bigstreaminfo">
+                    <div>
+                        <span class="bigstreamtitle"><%= apiData.cams[1].name %></span>
+                        <span><%= apiData.cams[1].altitude.value %> m n.m.</span>
+                    </div>
+                    <span class="bigstreamtitle"><%= apiData.cams[1].weather.wind.speed %> m/s</span>
+                    <span class="bigstreamtitle"><%= apiData.cams[1].weather.temperature.value %><sup>°C</sup></span>
+                </span>
+                <style>.bigstream{margin: 1vh 20%;}</style>
+            </div>
+        <% } %>
+    <!--    
+    <div class="bigstream">
+        <img src="/images/live.png" alt="Livestream" />
+        <span class="bigstreaminfo">
+            <div>
+                <span class="bigstreamtitle">Chopok-Rotunda</span>
+                <span>1234 mnm</span>
+            </div>
+            <span class="bigstreamtitle">2-5 m/s</span>
+            <span class="bigstreamtitle">-1<sup>°C</sup></span>
+        </span>
+    </div>
+    <div class="smallstreams">
+        <div class="smallstream">
+            <img class="smallvideo" src="/images/live.png" alt="Livestream" />
+            <span class="bigstreaminfo">
+                <span class="smallstreamtitle">Luková</span>
+                <span class="smallstreamtitle" >-1<sup>°C</sup></span>
+            </span>
+        </div>
+        <div class="smallstream" >
+            <img class="smallvideo" src="/images/live.png" alt="Livestream" />
+            <span class="bigstreaminfo">
+                <span class="smallstreamtitle">Luková</span>
+                <span class="smallstreamtitle">-1<sup>°C</sup></span>
+            </span>
+        </div>
+    </div>-->
+</div>
