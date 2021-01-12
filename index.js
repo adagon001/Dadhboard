@@ -12,9 +12,14 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'));
 
+
+
 // Routes
 app.get('/screen/resort/:resort', async (req, res, next) => {
     try {
+      //let headers = {
+         //'Accept-Language': 'pl'
+       //}
        const apiData = await axios.get('http://test.data.gopass.travel/api/mobile/home/resorts/'+req.params.resort);
        const apiNewsData = await axios.get('http://test.data.gopass.travel/api/mobile/news/resorts/'+req.params.resort);
        //pass apiData to index.ejs to take care of it

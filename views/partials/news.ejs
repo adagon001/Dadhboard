@@ -24,7 +24,7 @@
                     <% if(seconds<60){%> <%="práve teraz"%>
                     <% }else if(seconds<3600){%> <%="pred "+ Math.floor(seconds/60).toString()+" m"%>
                     <% }else if(seconds<86400){%> <%="pred "+ Math.floor(seconds/3600).toString()+" h"%>
-                    <% }else {%> <%=date.getDate().toString()+"."+date.getMonth().toString()+"."+date.getFullYear().toString()%>
+                    <% }else {%> <%=date.getDate().toString()+"."+(date.getMonth()+1).toString()+"."+date.getFullYear().toString()%>
                     <% }%> 
                 </em>
                 <em class="timeagosmall" >

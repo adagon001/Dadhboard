@@ -12,7 +12,7 @@
         window.scrollBy(0,1);
         scrolldelay = setTimeout(pageScroll,10);
         time();
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight-1) {
             window.scrollTo({top: 0,left: 0,behavior:"smooth"});
             clearTimeout(scrolldelay);
             setTimeout(pageScroll,1000);
